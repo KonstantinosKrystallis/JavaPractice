@@ -1,3 +1,5 @@
+package konkry.base;
+
 import java.util.Scanner;
 
 /*
