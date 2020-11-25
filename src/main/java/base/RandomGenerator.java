@@ -1,4 +1,4 @@
-package konkry.base;
+package base;
 
 import java.util.*;
 

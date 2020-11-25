@@ -1,4 +1,4 @@
-package konkry.base;
+package base;
 
 
 import org.junit.jupiter.api.Assertions;
