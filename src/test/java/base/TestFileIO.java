@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import java.util.Objects;
 
 public class TestFileIO {
 
     @Test
     @DisplayName("readFile tests")
     void readFileTests() {
-        Assertions.assertTrue(FileIO.readFile("./src/test/resources/LoremIpsum.txt").exists());
-        Assertions.assertTrue(FileIO.readFile("./src/test/resources/Empty.txt").exists());
-        Assertions.assertFalse(FileIO.readFile("./src/test/resources/DoesNotExist.txt").exists());
+        Assertions.assertTrue(Objects.requireNonNull(FileIO.readFile("./src/test/resources/LoremIpsum.txt")).exists());
+        Assertions.assertTrue(Objects.requireNonNull(FileIO.readFile("./src/test/resources/Empty.txt")).exists());
+        Assertions.assertFalse(Objects.requireNonNull(FileIO.readFile("./src/test/resources/DoesNotExist.txt")).exists());
     }
 
     @Test()
